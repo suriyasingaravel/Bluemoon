@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body{
+   font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+li{
+    list-style: none;
+
+}
+button{
+    border: none;
+    background: none;
+    outline: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/* .button{
+    padding: 15px 40px;
+    background:rgb(255, 255, 255) ;
+    font-weight: bold;
+    color: whitesmoke;
+} */
+
+.navbar{
+    display: flex;
+    width: 100%;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+     position: fixed;
+    left: 0px;
+    background-color: white;
+
+}
+.navbar div ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar input{
+    background-color: lightgray;
+    width: 350px;
+    height: 40px;
+    border-radius: 30px;
+    border: 0px;
+    padding-left: 10px;
+    
+}
+#cont{
+    display: flex;
+    gap: 15px;
+}
+.navbar .button{
+    padding: 8px 14px;
+    height: 30px;
+    color: whitesmoke;
+    background-color:black;
+    border-radius: 35px;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 90%;
+    margin: auto;
+    gap: 100px;
+    margin-top: 30px;
+}
+.main img{
+    width:16px;
+}
+.left-side div{
+   padding-bottom:22px ;
+}
+
+.right-side{
+    width: 70%;
+    border: 1px solid lightgray;
+    border-radius: 30px;
+    gap: 20px;
+}
+
+.right-side div{
+    padding-bottom: 40px;
+    border-radius: 20px;
+    padding-left: 15px;
+}
+
+.main > .right-side > div{
+ display: grid;
+ grid-template-columns: repeat(2,1fr);
+ border: 1px solid lightgray ;
+
+}
+
+.book{
+    width: 90px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    margin: 10px 10px 20px 120px;
+
+}
+

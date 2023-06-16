@@ -1,0 +1,449 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body{
+   font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+li{
+    list-style: none;
+
+}
+/* button{
+    border: none;
+    background: none;
+    outline: none;
+    transition: 0.5s;
+    cursor: pointer;
+} */
+
+/* .button{
+    padding: 15px 40px;
+    background:rgb(255, 255, 255) ;
+    font-weight: bold;
+    color: whitesmoke;
+} */
+
+.navbar{
+    display: flex;
+    width: 100%;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+     position: fixed;
+    left: 0px;
+    background-color: white;
+
+}
+.navbar div ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar input{
+    background-color: lightgray;
+    width: 350px;
+    height: 40px;
+    border-radius: 30px;
+    border: 0px;
+    padding-left: 10px;
+    
+}
+#cont{
+    display: flex;
+    gap: 15px;
+}
+.navbar .button{
+    padding: 8px 14px;
+    height: 30px;
+    color: whitesmoke;
+    background-color:black;
+    border-radius: 35px;
+}
+
+.main{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 20% 50%;
+    box-sizing: border-box;
+    gap: 35px;
+    
+}
+.left-side{
+    position: fixed;
+    width: 30%;
+    top: 100px;
+}
+
+.right-side{
+    width: 100%;
+   margin-left: 460px;
+ 
+}
+
+.lower{
+    width: 190px;
+    height: 30px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.upper{
+    width: 190px;
+    height: 30px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    text-align: center;
+}
+.main > .left-side > div {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+.main  img{
+    width:15px;
+}
+ .options{
+    border: 1px solid lightgray;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    height: 30px;
+    width: 100px;
+}
+#filter{
+    width: 300px;
+    height: 30px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    text-align: center;
+}
+.options:hover{
+    background-color:darkgray;
+
+}
+.conveniences{
+  width: 80px;
+   
+}
+
+/* .right-side{
+    float: right;
+} */
+
+#container{
+    width: 100%;
+    margin: auto; 
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+    margin-top: 30px;
+ }
+ 
+ #container img{
+     width: 200px;
+     height:150px;
+     border-radius: 20px;
+ }
+
+ .selection{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-left: 60px;
+    gap: 0px;
+ }
+
+ #apply{
+    width: 230px;
+    height: 50px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+   margin-left: 70px;
+ }
+
+@media screen and (max-width:579px){
+
+    .map{
+        width: 120px;
+    }
+    .navbar{
+        display: flex;
+        width: 100%;
+        margin: auto;
+        justify-content: space-around;
+        align-items: center;
+        left: 0px;
+        background-color: white;
+    }
+
+    .navbar div ul{
+       display: none;
+    }
+    .reset{
+        width:60px;
+    }
+
+    .navbar input{
+        background-color: lightgray;
+        width: 100px;
+        border-radius: 30px;
+        border: 0px;
+    }
+   
+    .main{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .left-side{
+        width: 30%;
+        
+    }
+    
+    .right-side{
+        width: 100%;
+    }
+    
+    .lower{
+        width: 100px;
+        height: 30px;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .upper{
+        width: 100px;
+        height: 30px;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .main > .left-side > div {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 5px;
+        margin-bottom: 15px;
+        margin-top: 5px;
+    }
+    .main  img{
+        width:15px;
+    }
+     .options{
+        border: 1px solid lightgray;
+        background-color: whitesmoke;
+        border-radius: 10px;
+        height: 30px;
+        width: 100px;
+    }
+    #filter{
+        width: 180px;
+        height: 30px;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        text-align: center;
+        margin-left: 40px;
+    }
+    .options:hover{
+        background-color:darkgray;
+    
+    }
+    .conveniences{
+      width:10px;
+       
+    }
+    
+    /* .right-side{
+        float: right;
+    } */
+    
+    #container{
+        width: 100%;
+        margin: auto; 
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 15px;
+        margin-top: 30px;
+     }
+     
+     #container img{
+         width: 200px;
+         height:150px;
+         border-radius: 20px;
+     }
+    
+     .selection{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 0px;
+     }
+     .selection button{
+      width: 40px;
+
+     }
+     #apply{
+        width: 130px;
+        height: 50px;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        margin-left: 70px;
+     }
+
+}
+
+@media screen and (min-width:581px) and (max-width:1020px){
+    .map{
+        width: 120px;
+    }
+    .navbar{
+        display: flex;
+        width: 100%;
+        margin: auto;
+        justify-content: space-around;
+        align-items: center;
+        left: 0px;
+        background-color: white;
+    }
+
+    .navbar div ul{
+       display: none;
+    }
+    .reset{
+        width:60px;
+    }
+
+    .navbar input{
+        background-color: lightgray;
+        width: 100px;
+        border-radius: 30px;
+        border: 0px;
+    }
+   
+    .main{
+        width: 80%;
+        margin: auto;
+       display: grid;
+       grid-template-columns: repeat(1,1fr);
+
+    }
+
+    .left-side{
+        width: 35%;
+        
+    }
+    
+    .right-side{
+        width: 100%;
+    }
+    
+    .lower{
+        width: 100px;
+        height: 30px;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .upper{
+        width: 100px;
+        height: 30px;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .main > .left-side > div {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 5px;
+        margin-bottom: 15px;
+        margin-top: 5px;
+    }
+    .main  img{
+        width:15px;
+    }
+     .options{
+        border: 1px solid lightgray;
+        background-color: whitesmoke;
+        border-radius: 10px;
+        height: 30px;
+        width: 100px;
+    }
+    #filter{
+        width: 180px;
+        height: 30px;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        text-align: center;
+        margin-left: 40px;
+    }
+    .options:hover{
+        background-color:darkgray;
+    
+    }
+    .conveniences{
+      width:10px;
+       
+    }
+    
+    /* .right-side{
+        float: right;
+    } */
+    
+    #container{
+        width: 100%;
+        margin: auto; 
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 15px;
+        margin-top: 30px;
+     }
+     
+     #container img{
+         width: 200px;
+         height:150px;
+         border-radius: 20px;
+     }
+    
+     .selection{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 0px;
+     }
+     .selection button{
+      width: 40px;
+
+     }
+     #apply{
+        width: 130px;
+        height: 50px;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        margin-left: 70px;
+     }
+}
