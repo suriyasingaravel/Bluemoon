@@ -3,7 +3,7 @@ let search= document.querySelector("#search");
 
 const PRODUCT_DATA = [
         {
-          propertyType: "treehouses",
+          propertyType: "tree-houses",
           price: 120,
           name: "Cozy Downtown Treehouses",
           place: "New York City",
@@ -38,7 +38,7 @@ const PRODUCT_DATA = [
           img: "https://storage.googleapis.com/artifacts-production-ukretreats/spaces/bill-measom/ukretreats/ukretreats-laravel/0_05292700_1665143673_c81adb24e4c08d17945c45efd404717b_1024.jpg"
         },
         {
-          propertyType: "treehouses",
+          propertyType: "tree-houses",
           price: 250,
           name: "Modern City Treehouses",
           place: "London",
@@ -66,7 +66,7 @@ const PRODUCT_DATA = [
           img: "https://storage.googleapis.com/artifacts-production-ukretreats/spaces/bill-measom/ukretreats/ukretreats-laravel/0_29747600_1680508554_20a618512b7830a3847e41c6d4490e6e_1024.jpg"
         },
         {
-          propertyType: "Treehouses",
+          propertyType: "tree-houses",
           price: 150,
           name: "Central City Treehouses",
           place: "Paris",
@@ -80,7 +80,7 @@ const PRODUCT_DATA = [
           img: "https://storage.googleapis.com/artifacts-production-ukretreats/spaces/bill-measom/ukretreats/ukretreats-laravel/0_25333700_1678716342_fbe2067544ed7b1a2e9c4f095526c049_1024.jpg"
         },
         {
-          propertyType: "treehouses",
+          propertyType: "tree-houses",
           price: 200,
           name: "Riverside Log Treehouses",
           place: "Norway",
@@ -94,9 +94,9 @@ const PRODUCT_DATA = [
           img: "https://storage.googleapis.com/artifacts-production-ukretreats/spaces/bill-measom/ukretreats/ukretreats-laravel/0_95966700_1668621476_d4bc74519d16a50972944142b7466f51_1024.jpg"
         },
         {
-          propertyType: "treehouses",
+          propertyType: "tree-houses",
           price: 90,
-          name: "Charming Studio Apartment",
+          name: "Charming Studio Treehouses",
           place: "Rome",
           img: "https://storage.googleapis.com/artifacts-production-ukretreats/spaces/bill-measom/ukretreats/ukretreats-laravel/0_00208600_1664992169_4056c860a5427955de11eaa28417ba68_1024.jpg"
         },
@@ -117,7 +117,25 @@ let container = document.querySelector("#container");
 let filter=document.querySelector("#filter");
 let from=document.querySelector(".lower");
 let to=document.querySelector(".upper");
-let apply=document.querySelector(".apply")
+let apply=document.querySelector("#apply")
+// let qty=document.querySelector("qty");
+// let decrease=document.querySelector("minus");
+// let increase=document.querySelector("qty");
+
+// increase.addEventListener("click", function(){
+//    qty.innerText++;
+ 
+// })
+
+
+
+
+// decrease.addEventListener("click",()=>{
+//   qty.innerText--;
+ 
+
+// })
+
 
 // filter.addEventListener("change", function(){
 //   if(filter.value=== ""){
@@ -134,22 +152,36 @@ let apply=document.querySelector(".apply")
 
 // })
 
-// apply.addEventListener("click", function () {
-//   if(filter.value== ""){
-//          display(PRODUCT_DATA)
-//       }
+apply.addEventListener("click", function () {
+  let filtered = PRODUCT_DATA.filter(function (element) {
+    if (element.price >= from.value && element.price <= to.value) {
+      return element;
+    }
+  });
+  display(filtered);
+});
 
-//       else{
-//         let filtered = PRODUCT_DATA.filter(function (element) {
-//           if (element.price >= from.value && element.price <= to.value) {
-//             return element;
-//           }
-//         });
-//         display(filtered);
 
-//   }
+
+  filter.addEventListener("change",function(){
+    // console.log("hi");
+        if(filter.value== ""){
+           display(PRODUCT_DATA);
+        }
+        else{
+            let filtered= PRODUCT_DATA.filter((e)=>{
+            if(e.propertyType===filter.value){
+                return e;
+            }
+        });
+        display(filtered);
+        }
+        
+    })
+
+
   
-// });
+
 
 search.addEventListener("input",function(){
 
@@ -167,47 +199,80 @@ search.addEventListener("input",function(){
 
 
 
-
-
-
-function display(data){
-    container.innerHTML=""; 
-    for(let i=0; i<data.length; i++){
-        
-        let product = document.createElement("div");
-        let image=document.createElement("img");
-        image.setAttribute("src", data[i].img);
-    
-        let name=document.createElement("h3");
-        name.innerText=data[i].name;
-    
-        let price=document.createElement("p");
-        price.innerText=data[i].price;
-        
-    
-        let place=document.createElement("p");
-        place.innerText=data[i].place;
-    
-        let propertyType=document.createElement("p");
-        propertyType.innerText=data[i].propertyype;
-            
-        // let cart=document.createElement("button");
-        // cart.innerText="Cart"
-    
-        
-        // cart.addEventListener("click", function(){
-        //   ls.push(data[i]);
-    
-        //   localStorage.setItem("myCart",JSON.stringify(ls));
-         
-        // })
-        
-         product.append(image,name,place,price);
-    
+  function display(data) {
+    container.innerHTML = "";
+    for (let i = 0; i < data.length; i++) {
+      let product = document.createElement("div");
+      
+      let image = document.createElement("img");
+      image.setAttribute("src", data[i].img);
+      
+      let link = document.createElement("a");
+      link.setAttribute("href", "Booking page.html");
+      link.appendChild(image);
+      
+      let name = document.createElement("h3");
+      name.innerText = data[i].name;
+      
+      let price = document.createElement("p");
+      price.innerText = "$" + " " + data[i].price;
+      
+      let place = document.createElement("p");
+      place.innerText = data[i].place;
+      
+      let propertyType = document.createElement("p");
+      propertyType.innerText = data[i].propertyType;
+      
+      product.append(link, name, place, price, propertyType);
+      
       container.append(product);
-    
     }
-    
-}
+  }
+  
+  display(PRODUCT_DATA);
 
- display(PRODUCT_DATA)
+
+// function display(data){
+//     container.innerHTML=""; 
+//     for(let i=0; i<data.length; i++){
+        
+//         let product = document.createElement("div");
+//         let image=document.createElement("img");
+//         image.setAttribute("src", data[i].img);
+//         const link = document.createElement("a");
+//         link.setAttribute("href", "Booking page.html");
+//         link.appendChild(image);
+    
+//         let name=document.createElement("h3");
+//         name.innerText=data[i].name;
+    
+//         let price=document.createElement("p");
+//         price.innerText= "$" +" "+ data[i].price;
+        
+    
+//         let place=document.createElement("p");
+//         place.innerText=data[i].place;
+    
+//         let propertyType=document.createElement("p");
+//         propertyType.innerText=data[i].propertyype;
+            
+//         // let cart=document.createElement("button");
+//         // cart.innerText="Cart"
+    
+        
+//         // cart.addEventListener("click", function(){
+//         //   ls.push(data[i]);
+    
+//         //   localStorage.setItem("myCart",JSON.stringify(ls));
+         
+//         // })
+        
+//          product.append(image,name,place,price);
+    
+//       container.append(product);
+    
+//     }
+    
+// }
+
+//  display(PRODUCT_DATA)

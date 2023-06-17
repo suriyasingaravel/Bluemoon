@@ -87,11 +87,16 @@ button{
    padding-bottom:22px ;
 }
 
+
 .right-side{
-    width: 70%;
+    width: 55%;
+    margin: auto;
     border: 1px solid lightgray;
+    margin-left: 70px;
     border-radius: 30px;
     gap: 20px;
+    text-align: center;
+    padding: 30px;
 }
 
 .right-side div{
@@ -100,21 +105,73 @@ button{
     padding-left: 15px;
 }
 
+.right-side .check{
+    border: 1px solid lightgray;
+    text-align: center;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
 .main > .right-side > div{
  display: grid;
  grid-template-columns: repeat(2,1fr);
- border: 1px solid lightgray ;
+ 
 
 }
 
 .book{
-    width: 90px;
-    height: 30px;
+    width: 300px;
+    height: 37px;
     border-radius: 20px;
     background-color: black;
     color: white;
     font-weight: bold;
-    margin: 10px 10px 20px 120px;
+    margin-left: 0px;
+    margin-right: 210px;
 
 }
+
+#image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  #image {
+    width: 100%;
+    height: auto;
+  }
+  
+  #Prev,
+  #Next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+  
+  #Prev:hover,
+  #Next:hover {
+    opacity: 0.7;
+  }
+  
+  #Prev {
+    left: 10px;
+  }
+  
+  #Next {
+    right: 10px;
+  }
+  
+
+  
+  
+  
+  
+  
 

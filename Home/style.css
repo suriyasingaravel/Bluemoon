@@ -78,9 +78,9 @@ li{
     display: grid;
     grid-template-columns: 20% 50%;
     box-sizing: border-box;
-    gap: 35px;
-    
+    gap: 30px;
 }
+
 .left-side{
     position: fixed;
     width: 30%;
@@ -89,7 +89,7 @@ li{
 
 .right-side{
     width: 100%;
-   margin-left: 460px;
+   margin-left: 520px;
  
 }
 

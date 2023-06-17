@@ -26,11 +26,20 @@ button{
     cursor: pointer;
 }
 
-.primary-btn{
-    padding: 15px 40px;
-    background:black ;
-    font-weight: bold;
+.navbar .button{
+    padding: 8px 14px;
+    height: 30px;
     color: whitesmoke;
+    background-color:black;
+    border-radius: 35px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top:30px ;
+    margin-bottom: 20px;
 }
 
 .navbar{
@@ -71,25 +80,33 @@ button{
 
  .top-section{
     padding-top: 20px;
-    width: 60%;
+    width: 55%;
     margin: auto;
     display: flex;
     flex-wrap:wrap ;
     margin-bottom: 50px;
+    text-align: center;
 }
 
 .top-section h1{
  font-size: 70px;
+ text-align: center;
 }
+
+.top-section p{
+    font-size: 18px;
+    text-align: center;
+    font-weight: lighter;
+   }
 
 .top-section img{
     width: 95%;
     padding-top: 30px;
     padding-left: 100px;
     text-align: center;
-}
+}   
 
-#offers{
+#offers{    
     width: 85%;
     margin: auto;
     display: grid;
@@ -97,26 +114,33 @@ button{
     gap:  10px;
 }
 #offers img{
-    width: 180%;
+    width: 500px;
     border-radius: 30px;
 }
 #offers div{
   display: grid;
   grid-template-columns: repeat(2,1fr);
+
 }
 
+
+ #offers .right-side{
+    width: 100%;
+ }
+
 #offers div div{
-   display:grid; 
+    width: 100%;
+    display:grid; 
    grid-template-columns: repeat(1,1fr);   
-   gap: 25px; 
+   padding-right: 10px;
 }
 #offers button{
     background-color: black;
     color: whitesmoke;
-    width: 100px;
-    height: 25px;
+    width: 130px;
+    height: 35px;
     border-radius: 30px;
-
+    font-size: 14px;
 }
 
 .mid-page{
@@ -125,6 +149,8 @@ button{
     grid-template-columns: repeat(2,1fr);
     margin-bottom: 50px;
     gap: 30px;
+    padding-left: 40px;
+    text-align: left;
 } 
 /* .mid-page div{
     width: 40%;
@@ -140,14 +166,20 @@ button{
     border-radius: 30px;
 }
 .mid-page > .left{
-  text-align: center;
   padding-top: 130px;
+  width: 80%;
 }
+
+.mid-page p{
+    font-size: 17px;
+}
+
+
 
 .membership{
     width: 80%;
     margin: auto;
-    height:380px;
+    height:430px;
     display:grid;
     grid-template-columns: repeat(3,1fr);
     gap: 20px;
@@ -161,8 +193,46 @@ button{
     
 }
 
+.membership div button{
+  background-color: white;
+  width: 250px;
+  height: 50px;
+  font-weight: bold;
+  border-radius: 30px;
+  font-size: 17px;
+  margin-left: 26px;
 
+}
 
+.bottom{
+     display: grid;
+     grid-template-columns: repeat(2,1fr);
+     gap: 25px;
+     margin-top: 40px;
+    
+    }
+    
+    .bottom img{
+      width: 26px;
+    }
+
+    .bottom > .left-phase{
+        width: 90%;
+        font-size: 15px;
+        color: rgb(150, 146, 146);
+    }
+   .bottom > .left-phase > div{
+    margin-top: 33px;
+    margin-left: 50px;
+   }
+
+   .bottom > .right-phase{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 140px;
+    padding-left:280px;
+   }
 
 
 @media only screen and (max-width:768px){
