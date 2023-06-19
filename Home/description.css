@@ -1,0 +1,471 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body{
+   font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+li{
+    list-style: none;
+
+}
+button{
+    border: none;
+    background: none;
+    outline: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.toggle-btn{
+    width:35px;
+    position: absolute;
+    right: 80px;
+    top:40px;
+    display: none;
+}
+
+.toggle-btn span{
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    float: left;
+    margin-bottom: 8px;
+
+}
+
+/* .button{
+    padding: 15px 40px;
+    background:rgb(255, 255, 255) ;
+    font-weight: bold;
+    color: whitesmoke;
+} */
+
+.navbar{
+    display: flex;
+    width: 100%;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+     position: fixed;
+    left: 0px;
+    background-color: white;
+
+}
+.navbar div ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar input{
+    background-color: lightgray;
+    width: 350px;
+    height: 40px;
+    border-radius: 30px;
+    border: 0px;
+    padding-left: 10px;
+    
+}
+#cont{
+    display: flex;
+    gap: 15px;
+}
+.navbar .button{
+    padding: 8px 14px;
+    height: 30px;
+    color: whitesmoke;
+    background-color:black;
+    border-radius: 35px;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 90%;
+    margin: auto;
+    gap: 100px;
+    margin-top: 30px;
+}
+.main img{
+    width:16px;
+}
+.left-side div{
+   padding-bottom:22px ;
+}
+
+
+.right-side{
+    width: 55%;
+    margin: auto;
+    border: 1px solid lightgray;
+    margin-left: 70px;
+    border-radius: 30px;
+    gap: 20px;
+    text-align: center;
+    padding: 30px;
+}
+
+.right-side div{
+    padding-bottom: 40px;
+    border-radius: 20px;
+    padding-left: 15px;
+}
+
+.right-side .check{
+    border: 1px solid lightgray;
+    text-align: center;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.main > .right-side > div{
+ display: grid;
+ grid-template-columns: repeat(2,1fr);
+ 
+
+}
+
+.book{
+    width: 300px;
+    height: 37px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    margin-left: 0px;
+    margin-right: 210px;
+
+}
+
+#image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  #image {
+    width: 100%;
+    height: auto;
+    width:70%; margin-left: 180px;
+  }
+  
+  #Prev,
+  #Next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+  
+  #Prev:hover,
+  #Next:hover {
+    opacity: 0.7;
+  }
+  
+  #Prev {
+    left: 10px;
+  }
+  
+  #Next {
+    right: 10px;
+  }
+  
+  @media screen and (max-width: 480px) {
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        
+       }
+    
+       header #logo{
+        margin-left: 10px;
+    
+       }
+        .toggle-btn{
+            display: block;
+    
+        }
+    
+        #nav-links{
+           display: none;
+           width: 100%;
+           border-top: 1px solid black;
+           padding-top: 20px;
+           margin-top: 30px;
+    
+        }
+         #nav-links.show{
+            display: block;
+         }
+    
+         #nav-links ul li{
+            padding: 15px 0px;
+            width: 100%;
+         }
+    
+         #login.show{
+            display: block;
+         }
+         #login{
+            display: none;
+            width: 100%;
+            border-top: 1px solid black;
+            padding-top: 20px;
+            padding-left: 20px;
+            margin-top: 30px;
+         }
+    
+         #login li{
+            padding: 15px 0px;
+            width: 100%;
+         }
+
+         .main{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            width: 90%;
+            margin: auto;
+            gap: 100px;
+            margin-top: 30px;
+        }
+       
+        .left-side div{
+           padding-bottom:22px ;
+        }
+
+        .main > .left-side{
+            width: 60%;
+        }
+
+        .main > .left-side > div> h2{
+            font-size: 20px;
+        }
+
+        .main > .left-side > div> h3{
+            font-size: 16px;
+        }
+        .main > .left-side > div> p{
+            width: 100%;
+            font-size: 13px;
+        }
+        
+        
+        .right-side{
+            width: 58%;
+            margin: auto;
+            border: 1px solid lightgray;
+            margin-left: 20px;
+            border-radius: 30px;
+            gap: 20px;
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .right-side div{
+            padding-bottom: 40px;
+            border-radius: 20px;
+            padding-left: 15px;
+        }
+        
+        .right-side .check{
+            border: 1px solid lightgray;
+            text-align: center;
+            width: 100%;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .main > .right-side > div{
+         display: grid;
+         grid-template-columns: repeat(1,1fr);
+         
+        
+        }
+        
+        .book{
+            width: 120px;
+            height: 37px;
+            border-radius: 20px;
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            margin-left: 15px;
+            margin-right: 210px;
+        
+        }
+
+        #image{
+            margin-top: 70px;
+            width:240px;
+            height: 150px;
+            margin-left: 40px;
+        }
+    
+    }
+        @media screen and (min-width: 481px) and (max-width: 1020px) {
+
+            header{
+                display: flex;
+                justify-content: space-between;
+                
+               }
+            
+               header #logo{
+                margin-left: 10px;
+            
+               }
+                .toggle-btn{
+                    display: block;
+            
+                }
+            
+                #nav-links{
+                   display: none;
+                   width: 100%;
+                   border-top: 1px solid black;
+                   padding-top: 20px;
+                   margin-top: 30px;
+            
+                }
+                 #nav-links.show{
+                    display: block;
+                 }
+            
+                 #nav-links ul li{
+                    padding: 15px 0px;
+                    width: 100%;
+                 }
+            
+                 #login.show{
+                    display: block;
+                 }
+                 #login{
+                    display: none;
+                    width: 100%;
+                    border-top: 1px solid black;
+                    padding-top: 20px;
+                    padding-left: 20px;
+                    margin-top: 30px;
+                 }
+            
+                 #login li{
+                    padding: 15px 0px;
+                    width: 100%;
+                 }
+        
+                 .main{
+                    display: grid;
+                    grid-template-columns: repeat(1,1fr);
+                    width: 90%;
+                    margin: auto;
+                    gap: 100px;
+                    margin-top: 30px;
+                }
+               
+                .left-side div{
+                   margin-bottom:10px ;
+                }
+        
+                .main > .left-side{
+                    width: 100%;
+                }
+        
+                .main > .left-side > div> h2{
+                    font-size: 35px;
+                }
+        
+                .main > .left-side > div> h3{
+                    font-size: 28px;
+                }
+                .main > .left-side > div> p{
+                    width: 100%;
+                    font-size: 18px;
+                }
+                
+                
+                .right-side{
+                    width: 60%;
+                    height: 450px;
+                    margin: auto;
+                    border: 1px solid lightgray;
+                    margin-left: 120px;
+                    border-radius: 30px;
+                    gap: 20px;
+                    text-align: center;
+                    padding: 30px;
+                }
+                
+                .right-side div{
+                    padding-bottom: 40px;
+                    border-radius: 20px;
+                    padding-left: 15px;
+                }
+                
+                .right-side .check{
+                    border: 1px solid lightgray;
+                    text-align: center;
+                    width: 100%;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    margin-bottom: 20px;
+                }
+                
+                .main > .right-side > div{
+                 display: grid;
+                 grid-template-columns: repeat(1,1fr);
+                 
+                
+                }
+                
+                .book{
+                    width: 170px;
+                    height: 44px;
+                    border-radius: 20px;
+                    background-color: black;
+                    color: white;
+                    font-weight: bold;
+                    margin-top: 50px;
+                    margin-left: 85px;
+                    margin-right: 210px;
+                
+                }
+        
+                #image{
+                    margin-top: 100px;
+                    width:600px;
+                    height: 400px;
+                    margin-left: 80px;
+                }
+
+
+                
+            
+
+
+
+  }
+  
+  
+  
+  
+  
+

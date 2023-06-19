@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking page</title>
+    <link rel="stylesheet" href="description.css">
+</head>
+<body>
+
+  <header>
+    <div class="navbar">
+       <div class="toggle-btn" onclick="myFunction()">
+        <span></span>
+        <span></span>
+        <span></span>
+
+       </div>
+
+        <div id="logo">
+           <img  style="width:130px;" class="logo"  src="BLUEMOON-ICON.png" alt="">
+        </div>   
+        
+        <!-- <input class="search" type="text"  placeholder="Search by name or location "> -->
+        <div style="width: 800px;" id="nav-links">
+            <ul id="menulist">
+   
+               <li> <a href="index.html">HOME</a> </li>
+               <li> <a href="Product page.html">HOUSES</a> </li>
+               <li> <a href="index.html#about-us">ABOUT US</a> </li>
+               <li> <a href="index.html#perks-section">PERKS</a> </li>
+              
+            </ul>
+              <span class="fa fa-bars"></span>
+        </div>
+
+        <div id="login">
+             <li>  <a class="button" href="New login.html"  > LOGIN </a> </li>
+            <!-- <button style="width: 120px;height: 40px; font-size: 16px;">  <a href="New login.html"></a>Login </button> -->
+        </div>
+       
+       </div>
+</header>
+     
+        
+            <div>
+               <img  id="image" src="" alt="">
+               
+            </div>
+              <div class="main">
+              <div class="left-side">
+                 <div>
+                  <h2 id="headOne">Quaint Countryside Cottage </h2>
+                  <h3> Cotswolds</h3>
+                 </div>
+                 <div class="Conveniences">
+                    <button class="options"> <img src="https://cdn-icons-png.flaticon.com/128/167/167018.png" alt=""> TV</button>
+                    <button class="options"> <img src="https://cdn-icons-png.flaticon.com/128/2744/2744852.png" alt=""> Air cooler</button>
+                    <button class="options"> <img src="https://cdn-icons-png.flaticon.com/128/735/735331.png" alt="">  In the Woods</button>
+                    <button class="options"> <img src="https://cdn-icons-png.flaticon.com/128/1906/1906613.png" alt=""> Hot Tubs</button>
+                </div>
+    
+                <div>
+                 <p>
+                    This beautiful shepherds hut is located within its own acre of natural beauty, yet still only 5 minutes from Bristol Airport and local cafes/pubs. 
+                    <br>
+                    <br>
+                    The perfect location to escape from the hustle of life, go for nice walks, bike rides or just relax with a large glass of wine in the outdoor bathtub whilst enjoying the beautiful views and fire pit. You can even bring your four-legged best friend! The hut is fully equipped with everything you would need for a perfect stay.
+                 </p>
+                </div>
+        </div>
+
+        <div class="right-side">
+           <div>
+            <h2>$16/ night</h2>
+            <p><img style="width: 16px;" src="https://cdn-icons-png.flaticon.com/128/1828/1828970.png" alt="">4.95 </p>
+           </div>
+           <div class="check">
+            <p>CHECK-IN</p>
+            <!-- <input type="date" name="" id=""> -->
+            <input type="date" name="" id="">
+            <p>CHECK-OUT</p>
+            <input type="date" name="" id="">
+           </div>
+           <div>
+            <h4>GUESTS</h4>
+           </div>
+
+           <div>
+            <Button class="book">Book Now</Button>
+           </div>
+        </div>
+         
+
+      </div>
+
+
+    
+</body>
+</html>
+
+<script>
+   
+
+   let book=document.querySelector(".book");
+
+   book.addEventListener("click",function(){
+     
+
+   })
+
+   let image = document.querySelector("#image");
+   let headOne=document.querySelector("#headOne")
+
+   let show=JSON.parse(localStorage.getItem("slide"));
+
+  //  console.log(show.img);
+   image.src=show.img;
+   headOne.innerText=show.name;
+
+
+
+
+// let prevButton = document.querySelector("#Prev");
+// let nextButton = document.querySelector("#Next");
+
+// let currentImage = 0;
+// let imagesArr=[
+// "https://www.momondo.co.uk/discover/wp-content/uploads/sites/250/2019/10/CREDIT_Provided-by-Booking.com_Tree-House-Lodge-HID568212-BOOKING-591150-52468693-image.jpg",
+//     "https://lp-cms-production.imgix.net/2020-11/3.%20Lovtag%20Interi%C3%B8r_1.jpg?auto=format&q=75&w=1920",
+//     "https://media.glampinghub.com/CACHE/images/accommodations/spa-tree-house-cabins-in-the-beautiful-province-of-quercy-france-1563539411469/2651485951e27b53e8949940a2643d02.avif",
+//     "https://media.glampinghub.com/CACHE/images/accommodations/enchanting-tree-house-near-rocamadour-in-southwest-france-1533282992826/bb41a0f6a85c24ec4d735b23d99dc246.avif",
+//     "https://lp-cms-production.imgix.net/2020-11/7.%20view-of-living-room-tv-and-main-king-sized-double-bed-in-oakey-koakey-treehouse.jpg?auto=format&q=75",
+//     "https://www.momondo.co.uk/discover/wp-content/uploads/sites/250/2019/10/CREDIT_Courtesy-of-Winvian-Farm_Charter-Oak-Bedroom.jpg",
+    
+
+// ];
+
+// // Function to change the image
+// function changeImage() {
+//   currentImage++;
+//   if (currentImage >= imagesArr.length) {
+//     currentImage = 0;
+//   }
+//   image.setAttribute("src", imagesArr[currentImage]);
+// }
+
+// // Set interval to change the image every 5 seconds (5000 milliseconds)
+// setInterval(changeImage, 2000);
+
+// prevButton.addEventListener("click", function() {
+//   currentImage--;
+//   if (currentImage < 0) {
+//     currentImage = imagesArr.length - 1;
+//   }
+//   image.setAttribute("src", imagesArr[currentImage]);
+// });
+
+// nextButton.addEventListener("click", function() {
+//   currentImage++;
+//   if (currentImage >= imagesArr.length) {
+//     currentImage = 0;
+//   }
+//   image.setAttribute("src", imagesArr[currentImage]);
+// });
+
+
+
+
+function myFunction(){
+   var navbar= document.getElementById("nav-links");
+   navbar.classList.toggle('show');
+   var login =document.getElementById("login");
+   login.classList.toggle('show');
+}
+
+ 
+ 
+
+</script>
