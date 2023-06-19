@@ -60,6 +60,8 @@ li{
     padding-left: 10px;
     
 }
+
+
 #cont{
     display: flex;
     gap: 15px;
@@ -71,6 +73,24 @@ li{
     background-color:black;
     border-radius: 35px;
 }
+
+.toggle-btn{
+    width:35px;
+    position: absolute;
+    right: 80px;
+    top:40px;
+    display: none;
+}
+
+.toggle-btn span{
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    margin-bottom: 8px;
+
+}
+
 
 .main{
     width: 90%;
@@ -178,105 +198,64 @@ li{
    margin-left: 70px;
  }
 
-@media screen and (max-width:579px){
 
-    .map{
-        width: 120px;
+ @media screen and (max-width: 480px) {
+
+    header{
+     display: flex;
+     justify-content: space-between;
+     
     }
-    .navbar{
-        display: flex;
+ 
+    header #logo{
+     margin-left: 40px;
+ 
+    }
+     .toggle-btn{
+         display: flex;
+         flex-direction: column;
+ 
+     }
+ 
+     #nav-links{
+        display: none;
         width: 100%;
-        margin: auto;
-        justify-content: space-around;
-        align-items: center;
-        left: 0px;
-        background-color: white;
+        border-top: 1px solid black;
+        padding-top: 20px;
+        margin-top: 30px;
+ 
+     }
+      #nav-links.show{
+         display: block;
+      }
+ 
+      #nav-links ul li{
+         padding: 15px 0px;
+         width: 100%;
+      }
+ 
+      #login.show{
+         display: block;
+      }
+      #login{
+         display: none;
+         width: 100%;
+         border-top: 1px solid black;
+         padding-top: 20px;
+         padding-left: 20px;
+         margin-top: 30px;
+      }
+ 
+      #login li{
+         padding: 15px 0px;
+         width: 100%;
+      }
+
+      .main{
+       display: grid;
+       grid-template-columns: repeat(2,1fr);
     }
 
-    .navbar div ul{
-       display: none;
-    }
-    .reset{
-        width:60px;
-    }
-
-    .navbar input{
-        background-color: lightgray;
-        width: 100px;
-        border-radius: 30px;
-        border: 0px;
-    }
-   
-    .main{
-        width: 80%;
-        margin: auto;
-        display: flex;
-        flex-direction: row;
-
-    }
-
-    .left-side{
-        width: 30%;
-        
-    }
-    
-    .right-side{
-        width: 100%;
-    }
-    
-    .lower{
-        width: 100px;
-        height: 30px;
-        border: 1px solid lightgray;
-        border-radius: 10px;
-        text-align: center;
-    }
-    .upper{
-        width: 100px;
-        height: 30px;
-        border: 1px solid lightgray;
-        border-radius: 10px;
-        text-align: center;
-    }
-
-    .main > .left-side > div {
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        gap: 5px;
-        margin-bottom: 15px;
-        margin-top: 5px;
-    }
-    .main  img{
-        width:15px;
-    }
-     .options{
-        border: 1px solid lightgray;
-        background-color: whitesmoke;
-        border-radius: 10px;
-        height: 30px;
-        width: 100px;
-    }
-    #filter{
-        width: 180px;
-        height: 30px;
-        border: 1px solid lightgray;
-        border-radius: 10px;
-        text-align: center;
-        margin-left: 40px;
-    }
-    .options:hover{
-        background-color:darkgray;
-    
-    }
-    .conveniences{
-      width:10px;
-       
-    }
-    
-    /* .right-side{
-        float: right;
-    } */
-    
     #container{
         width: 100%;
         margin: auto; 
@@ -285,34 +264,15 @@ li{
         gap: 15px;
         margin-top: 30px;
      }
-     
-     #container img{
-         width: 200px;
-         height:150px;
-         border-radius: 20px;
-     }
-    
-     .selection{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        gap: 0px;
-     }
-     .selection button{
-      width: 40px;
-
-     }
-     #apply{
-        width: 130px;
-        height: 50px;
-        border: 1px solid lightgray;
-        border-radius: 10px;
-        background-color: black;
-        color: white;
-        font-weight: bold;
-        margin-left: 70px;
+     .right-side iframe{
+        display: none;
      }
 
-}
+
+
+
+    } 
+  
 
 @media screen and (min-width:581px) and (max-width:1020px){
     .map{
@@ -446,4 +406,5 @@ li{
         font-weight: bold;
         margin-left: 70px;
      }
+    
 }

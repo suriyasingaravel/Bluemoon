@@ -8,42 +8,49 @@
 </head>
 <body>
 
-    <header>
-        <div class="navbar">
-            <div id="logo">
-              <img style="width:160px;" class="logo" src="BLUEMOON-ICON.png" alt="">
-            </div>   
-            
-            <!-- <input class="search" type="text"  placeholder="Search by name or location "> -->
-            <div id="nav-links">
-                <ul id="menulist">
-       
-                   <li> <a href="Home page.html">HOME</a> </li>
-                   <li> <a href="Product page.html">HOUSES</a> </li>
-                   <li> <a href="Home page.html#about-us">ABOUT US</a> </li>
-               <li> <a href="Home page.html#perks-section">PERKS</a> </li>
-                   <li>  <a class="button" href="Login Page.html"> LOGIN </a> </li>
-                </ul>
-                  <span class="fa fa-bars"></span>
-               <!-- <a href="">HOME</a>
-               <a href="">ABOUT US</a>
-               <a href="">PERKS</a>
-               <a href="">FAQs</a> -->
-            </div>
-           
-           </div>
-    </header>
+  <header>
+    <div class="navbar">
+       <div class="toggle-btn" onclick="myFunction()">
+        <span></span>
+        <span></span>
+        <span></span>
 
+       </div>
+
+        <div id="logo">
+           <img  style="width:130px;" class="logo"  src="BLUEMOON-ICON.png" alt="">
+        </div>   
+        
+        <!-- <input class="search" type="text"  placeholder="Search by name or location "> -->
+        <div style="width: 800px;" id="nav-links">
+            <ul id="menulist">
+   
+               <li> <a href="index.html">HOME</a> </li>
+               <li> <a href="Product page.html">HOUSES</a> </li>
+               <li> <a href="index.html#about-us">ABOUT US</a> </li>
+               <li> <a href="index.html#perks-section">PERKS</a> </li>
+              
+            </ul>
+              <span class="fa fa-bars"></span>
+        </div>
+
+        <div id="login">
+             <li>  <a class="button" href="New login.html"  > LOGIN </a> </li>
+            <!-- <button style="width: 120px;height: 40px; font-size: 16px;">  <a href="New login.html"></a>Login </button> -->
+        </div>
+       
+       </div>
+</header>
      
         
             <div>
-                <img id="image"  style="width:70%; margin-left: 180px;" src="https://lp-cms-production.imgix.net/2020-11/7.%20view-of-living-room-tv-and-main-king-sized-double-bed-in-oakey-koakey-treehouse.jpg?auto=format&q=75",
+               <img  id="image" src="" alt="">
                
             </div>
               <div class="main">
               <div class="left-side">
                  <div>
-                  <h2>Quaint Countryside Cottage </h2>
+                  <h2 id="headOne">Quaint Countryside Cottage </h2>
                   <h3> Cotswolds</h3>
                  </div>
                  <div class="Conveniences">
@@ -70,7 +77,10 @@
            </div>
            <div class="check">
             <p>CHECK-IN</p>
+            <!-- <input type="date" name="" id=""> -->
+            <input type="date" name="" id="">
             <p>CHECK-OUT</p>
+            <input type="date" name="" id="">
            </div>
            <div>
             <h4>GUESTS</h4>
@@ -100,48 +110,71 @@
    })
 
    let image = document.querySelector("#image");
-let prevButton = document.querySelector("#Prev");
-let nextButton = document.querySelector("#Next");
+   let headOne=document.querySelector("#headOne")
 
-let currentImage = 0;
-let imagesArr=[
-"https://www.momondo.co.uk/discover/wp-content/uploads/sites/250/2019/10/CREDIT_Provided-by-Booking.com_Tree-House-Lodge-HID568212-BOOKING-591150-52468693-image.jpg",
-    "https://lp-cms-production.imgix.net/2020-11/3.%20Lovtag%20Interi%C3%B8r_1.jpg?auto=format&q=75&w=1920",
-    "https://media.glampinghub.com/CACHE/images/accommodations/spa-tree-house-cabins-in-the-beautiful-province-of-quercy-france-1563539411469/2651485951e27b53e8949940a2643d02.avif",
-    "https://media.glampinghub.com/CACHE/images/accommodations/enchanting-tree-house-near-rocamadour-in-southwest-france-1533282992826/bb41a0f6a85c24ec4d735b23d99dc246.avif",
-    "https://lp-cms-production.imgix.net/2020-11/7.%20view-of-living-room-tv-and-main-king-sized-double-bed-in-oakey-koakey-treehouse.jpg?auto=format&q=75",
-    "https://www.momondo.co.uk/discover/wp-content/uploads/sites/250/2019/10/CREDIT_Courtesy-of-Winvian-Farm_Charter-Oak-Bedroom.jpg",
+   let show=JSON.parse(localStorage.getItem("slide"));
+
+  //  console.log(show.img);
+   image.src=show.img;
+   headOne.innerText=show.name;
+
+
+
+
+// let prevButton = document.querySelector("#Prev");
+// let nextButton = document.querySelector("#Next");
+
+// let currentImage = 0;
+// let imagesArr=[
+// "https://www.momondo.co.uk/discover/wp-content/uploads/sites/250/2019/10/CREDIT_Provided-by-Booking.com_Tree-House-Lodge-HID568212-BOOKING-591150-52468693-image.jpg",
+//     "https://lp-cms-production.imgix.net/2020-11/3.%20Lovtag%20Interi%C3%B8r_1.jpg?auto=format&q=75&w=1920",
+//     "https://media.glampinghub.com/CACHE/images/accommodations/spa-tree-house-cabins-in-the-beautiful-province-of-quercy-france-1563539411469/2651485951e27b53e8949940a2643d02.avif",
+//     "https://media.glampinghub.com/CACHE/images/accommodations/enchanting-tree-house-near-rocamadour-in-southwest-france-1533282992826/bb41a0f6a85c24ec4d735b23d99dc246.avif",
+//     "https://lp-cms-production.imgix.net/2020-11/7.%20view-of-living-room-tv-and-main-king-sized-double-bed-in-oakey-koakey-treehouse.jpg?auto=format&q=75",
+//     "https://www.momondo.co.uk/discover/wp-content/uploads/sites/250/2019/10/CREDIT_Courtesy-of-Winvian-Farm_Charter-Oak-Bedroom.jpg",
     
 
-];
+// ];
 
-// Function to change the image
-function changeImage() {
-  currentImage++;
-  if (currentImage >= imagesArr.length) {
-    currentImage = 0;
-  }
-  image.setAttribute("src", imagesArr[currentImage]);
+// // Function to change the image
+// function changeImage() {
+//   currentImage++;
+//   if (currentImage >= imagesArr.length) {
+//     currentImage = 0;
+//   }
+//   image.setAttribute("src", imagesArr[currentImage]);
+// }
+
+// // Set interval to change the image every 5 seconds (5000 milliseconds)
+// setInterval(changeImage, 2000);
+
+// prevButton.addEventListener("click", function() {
+//   currentImage--;
+//   if (currentImage < 0) {
+//     currentImage = imagesArr.length - 1;
+//   }
+//   image.setAttribute("src", imagesArr[currentImage]);
+// });
+
+// nextButton.addEventListener("click", function() {
+//   currentImage++;
+//   if (currentImage >= imagesArr.length) {
+//     currentImage = 0;
+//   }
+//   image.setAttribute("src", imagesArr[currentImage]);
+// });
+
+
+
+
+function myFunction(){
+   var navbar= document.getElementById("nav-links");
+   navbar.classList.toggle('show');
+   var login =document.getElementById("login");
+   login.classList.toggle('show');
 }
 
-// Set interval to change the image every 5 seconds (5000 milliseconds)
-setInterval(changeImage, 3000);
-
-prevButton.addEventListener("click", function() {
-  currentImage--;
-  if (currentImage < 0) {
-    currentImage = imagesArr.length - 1;
-  }
-  image.setAttribute("src", imagesArr[currentImage]);
-});
-
-nextButton.addEventListener("click", function() {
-  currentImage++;
-  if (currentImage >= imagesArr.length) {
-    currentImage = 0;
-  }
-  image.setAttribute("src", imagesArr[currentImage]);
-});
-
+ 
+ 
 
 </script>

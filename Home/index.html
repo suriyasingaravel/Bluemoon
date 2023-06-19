@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="Homepage.css">
 </head>
 <body>
 <!-- navbar section  -->
 <header>
     <div class="navbar">
+       <div class="toggle-btn" onclick="myFunction()">
+        <span></span>
+        <span></span>
+        <span></span>
+
+       </div>
+
         <div id="logo">
            <img  style="width:130px;" class="logo"  src="BLUEMOON-ICON.png" alt="">
         </div>   
@@ -18,7 +25,7 @@
         <div style="width: 800px;" id="nav-links">
             <ul id="menulist">
    
-               <li> <a href="Home page.html">HOME</a> </li>
+               <li> <a href="index.html">HOME</a> </li>
                <li> <a href="Product page.html">HOUSES</a> </li>
                <li> <a href="#about-us">ABOUT US</a> </li>
                <li> <a href="#perks-section">PERKS</a> </li>  
@@ -27,7 +34,7 @@
               <span class="fa fa-bars"></span>
         </div>
 
-        <div>
+        <div id="login">
              <li>  <a class="button" href="New login.html"  > LOGIN </a> </li>
             <!-- <button style="width: 120px;height: 40px; font-size: 16px;">  <a href="New login.html"></a>Login </button> -->
         </div>
@@ -95,7 +102,7 @@
         <p>Our mission is to help you discover unique stays which align with our brand. These are high end, luxury experiences, making them ideal for special occasions.</p>
     </div>
     <div class="left">
-        <img style="width: 600px;" src="https://join.ukretreats.club/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fphoto2.54dbaa13.jpg&w=3840&q=75" alt="">
+        <img style="" src="https://join.ukretreats.club/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fphoto2.54dbaa13.jpg&w=3840&q=75" alt="">
     </div>
   </div>
  
@@ -103,7 +110,7 @@
     <div class="right">
         <img style="" src="https://join.ukretreats.club/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fphoto3.09c7d56b.jpg&w=3840&q=75" alt="">
     </div>
-    <div class="right" style="width: 100%;padding-left: 150px; padding-top: 130px;">
+    <div class="right-side" style="">
         <h1>Rest and recharge</h1>
         <br>
         <br>
@@ -195,7 +202,7 @@
     </div>
 
     <div>
-        ©2023 UK Retreats Ltd (Company no.13 822 175). All rights reserved. We use cookies and similar technologies to help personalise content, tailor and measure ads, and provide a better experience. If you’re happy with this, please continue to use our website normally. If you’d like to change your cookie settings, read our Cookies Policy for more information.
+      <p>©2023 UK Retreats Ltd (Company no.13 822 175). All rights reserved. We use cookies and similar technologies to help personalise content, tailor and measure ads, and provide a better experience. If you’re happy with this, please continue to use our website normally. If you’d like to change your cookie settings, read our Cookies Policy for more information.</p>  
     </div>
 
   </div>
@@ -218,3 +225,14 @@
     
 </body>
 </html>
+
+<script>
+
+ function myFunction(){
+    var navbar= document.getElementById("nav-links");
+    navbar.classList.toggle('show');
+    var login =document.getElementById("login");
+    login.classList.toggle('show');
+ }
+
+</script>
