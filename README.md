@@ -3,9 +3,11 @@
 
 BlueMoon is a website designed to help users find and rent holiday houses for their vacations. Whether you're planning a weekend getaway, a family vacation, or an extended trip, BlueMoon offers a wide range of holiday house options to suit your needs.
 
+## Netlify Link - https://jolly-travesseiro-fc3c6d.netlify.app/
+
 ![BlueMoon Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2znsk9cmcwvk32447vqu.png)
 
-## Netlify Link - https://jolly-travesseiro-fc3c6d.netlify.app/
+
 
 ## Table of Contents
 - [Features](#features)
